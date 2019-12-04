@@ -91,4 +91,11 @@ public class Contacts {
                 && phoneNumber.equals(other.getPhoneNumber())
                 && documentType == other.getDocumentType();
     }
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+        result = 31 * result + (id == null ? 0 : id.hashCode());
+        return result;
+    }
 }

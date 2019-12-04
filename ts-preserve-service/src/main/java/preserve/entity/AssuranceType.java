@@ -35,24 +35,12 @@ public enum AssuranceType implements Serializable{
         return index;
     }
 
-    public void setIndex(int index) {
-        this.index = index;
-    }
-
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public double getPrice() {
         return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
     }
 
     public static AssuranceType getTypeByIndex(int index){
@@ -64,6 +52,5 @@ public enum AssuranceType implements Serializable{
          }
          return null;
     }
-
-
+    
 }
