@@ -227,14 +227,17 @@ public class TravelServiceImpl implements TravelService {
 
         //Set the returned ticket information
         TripResponse response = new TripResponse();
-        if (queryForStationId(startingPlaceName, headers).equals(trip.getStartingStationId()) &&
+        
+        /*if (queryForStationId(startingPlaceName, headers).equals(trip.getStartingStationId()) &&
                 queryForStationId(endPlaceName, headers).equals(trip.getTerminalStationId())) {
             response.setConfortClass(50);
             response.setEconomyClass(50);
         } else {
             response.setConfortClass(50);
             response.setEconomyClass(50);
-        }
+        }*/
+        response.setConfortClass(50);
+        response.setEconomyClass(50);
 
         int first = getRestTicketNumber(departureTime, trip.getTripId().toString(),
                 startingPlaceName, endPlaceName, SeatClass.FIRSTCLASS.getCode(), headers);
